@@ -21,28 +21,28 @@ BaliRaja is a smart agriculture assistant that leverages **Machine Learning** to
 - ⚡ **Lightweight Python Script** – Easy to use for local testing and demos.
 - 🧪 Can be extended with real-time sensor input or mobile integration.
  
-*rice*
-*maize*
-*chickpea*
-*kidneybeans*
-*pigeonpeas*
-*mothbeans*
-*mungbean*
-*blackgram*
-*lentil*
-*pomegranate*
-*banana*
-*mango*
-*grapes*
-*watermelon*
-*muskmelon*
-*apple*
-*orange*
-*papaya*
-*coconut*
-*cotton*
-*jute*
-*coffee*
+- *rice*
+- *maize*
+- *chickpea*
+- *kidneybeans*
+- *pigeonpeas*
+- *mothbeans*
+- *mungbean*
+- *blackgram*
+- *lentil*
+- *pomegranate*
+- *banana*
+- *mango*
+- *grapes*
+- *watermelon*
+- *muskmelon*
+- *apple*
+- *orange*
+- *papaya*
+- *coconut*
+- *cotton*
+- *jute*
+- *coffee*
 
 ---
 
