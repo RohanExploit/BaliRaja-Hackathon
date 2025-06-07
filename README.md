@@ -20,7 +20,8 @@ BaliRaja is a smart agriculture assistant that leverages **Machine Learning** to
 - 🧠 **ML-Driven Predictions** using trained classification models.
 - ⚡ **Lightweight Python Script** – Easy to use for local testing and demos.
 - 🧪 Can be extended with real-time sensor input or mobile integration.
- 
+
+## CROPS
 - *rice*
 - *maize*
 - *chickpea*
