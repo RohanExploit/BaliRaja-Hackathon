@@ -1,0 +1,220 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+MDScreen:
+    name: "mainscreen"
+    BoxLayout:
+        padding: "10dp"
+           
+    MDBottomNavigation:
+        panel_color: get_color_from_hex("#18453B")
+        text_color_active: get_color_from_hex("F5F5F5")
+        MDBottomNavigationItem:
+            name: "home"
+            text: "Home"
+            icon: "home"
+            Image:
+                source: 'assets\logo.png'
+                allow_stretch: True
+                pos_hint: {"center_y": .9}
+                anim_delay: 0
+                anim_reset: True
+            MDLabel:
+                text: "fertiCulture predicts by how much you can enrich your precious soil, while informing you of its potential bounty."
+                pos_hint: {"center_y": .5}
+                halign: "center"
+                font_name: "Montserrat-Light"
+            MDLabel:
+                text: "A farmer's dream, manifest."
+                pos_hint: {"center_y": .3}
+                halign: "center"
+                font_name: "Montserrat-Light"
+        MDBottomNavigationItem:
+            name: "yield"
+            text: "Crop Yield"
+            icon: "leaf"
+            MDLabel:
+                text: "Projecting Crop Yield"
+                pos_hint: {"center_y": .95}
+                halign: "center"
+                font_name: "Montserrat-Black"
+            MDTextField:
+                id: wgt
+                hint_text: "Grain Weight"
+                required: True
+                helper_text: "Enter in pounds"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .85, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: mois
+                hint_text: "Grain Moisture"
+                required: True
+                helper_text: "Enter in %"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .7, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: area
+                hint_text: "Harvested Area"
+                required: True
+                helper_text: "Enter in square feet"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .55, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: cropy
+                hint_text: "Crop"
+                required: True
+                helper_text: "Refer to the Codebook"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .4, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDRaisedButton:
+                text: "Calculate Projected Yield"
+                pos_hint: {"center_y": .25, "center_x": .5}
+                on_press: app.crop_yield()
+                md_bg_color: "black"
+            MDLabel:
+                id: resulty
+                pos_hint: {"center_y": .1}
+                halign: "center"
+                font_name: "Montserrat-Black"
+                font_style: "Caption"
+        MDBottomNavigationItem:
+            name: "npk"
+            text: "Soil Minerals"
+            icon: "diamond-stone"
+            MDLabel:
+                text: "Predicting Nitrogen Values"
+                pos_hint: {"center_y": .95}
+                halign: "center"
+                font_name: "Montserrat-Black"
+            MDTextField:
+                id: temp
+                hint_text: "Temperature"
+                required: True
+                helper_text: "Enter in Celsius"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .85, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: hum
+                hint_text: "Humidity"
+                required: True
+                helper_text: "Enter in %"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .7, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: pH
+                hint_text: "Soil pH"
+                required: True
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .55, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: rain
+                hint_text: "Rainfall"
+                required: True
+                helper_text: "Enter in millimeter"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .4, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDTextField:
+                id: crop
+                hint_text: "Crop"
+                required: True
+                helper_text: "Refer to the Codebook"
+                helper_text_mode: "on_focus"
+                pos_hint: {"center_y": .25, "center_x": .5}
+                size_hint_x: 0.6
+                mode: "rectangle"
+            MDRaisedButton:
+                text: "Predict Optimal Nitrogen"
+                pos_hint: {"center_y": .12, "center_x": .5}
+                on_press: app.generate_npk()
+                md_bg_color: "black"
+            MDLabel:
+                id: result
+                pos_hint: {"center_y": .055}
+                halign: "center"
+                font_name: "Montserrat-Black"
+                font_style: "Caption"
+            
+        MDBottomNavigationItem:    
+            name: "rd"
+            text: "Resources"
+            icon: "information"
+            MDLabel:
+                text: "Important Links and Resources"
+                pos_hint: {"center_y": .95}
+                halign: "center"
+                font_name: "Montserrat-Black"
+            MDRaisedButton:
+                text: "Soil Testing - IARI"
+                pos_hint: {"center_y": .55, "center_x": .5}
+                on_press: app.link1()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "NPK Fertilizer Calculator"
+                pos_hint: {"center_y": .45, "center_x": .5}
+                on_press: app.link2()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "Ministry of Agriculture & Farmers Welfare"
+                pos_hint: {"center_y": .75, "center_x": .5}
+                on_press: app.link3()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "Government Schemes for Farmers"
+                pos_hint: {"center_y": .65, "center_x": .5}
+                on_press: app.link4()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "Indian Agricultural Research Institute"
+                pos_hint: {"center_y": .35, "center_x": .5}
+                on_press: app.link5()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "Sustainable Agriculture - IARI"
+                pos_hint: {"center_y": .25, "center_x": .5}
+                on_press: app.link6()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "United States Department of Agriculture"
+                pos_hint: {"center_y": .75, "center_x": .5}
+                on_press: app.link3()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "Minority and Women Farmers and Ranchers"
+                pos_hint: {"center_y": .65, "center_x": .5}
+                on_press: app.link4()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "Soil Health Institute"
+                pos_hint: {"center_y": .35, "center_x": .5}
+                on_press: app.link5()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+            MDRaisedButton:
+                text: "How much is too much for the climate?"
+                pos_hint: {"center_y": .25, "center_x": .5}
+                on_press: app.link6()
+                md_bg_color: "black"
+                font_name: "Montserrat-Light"
+    

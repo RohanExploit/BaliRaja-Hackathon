@@ -1,0 +1,22 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+MDScreen:
+    name: "splash"
+    on_enter: self.ids.progress.start()
+    FloatLayout:
+        Image:
+            source: 'assets\logo.png'
+            allow_stretch: True
+            anim_delay: 0
+            anim_reset: True
+        BoxLayout:
+            pos_hint:{'center_y': 0.1, 'center_x': 0.5}
+            padding: "10dp"
+            size_hint_x: 0.7
+            size_hint_y: 0.05
+            MDProgressBar:
+                id: progress
+                orientation: "horizontal"
+                type: "indeterminate"
+                running_duration: 1
+                catching_duration: 1
