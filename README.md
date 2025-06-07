@@ -3,7 +3,7 @@
 > **Empowering Farmers. Enabling Sustainability.**  
 **BaliRaja** is an ML-driven application built with Python, aimed at transforming India's agricultural sector by promoting **smart farming**, **climate resilience**, and **sustainable crop planning**.
 
-![BaliRaja Banner](https://ibb.co/DHJtRmp4)
+![BaliRaja Banner](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl0dern0Db8lSSWXByAdtW4ZIjZGiAUki0fmP4gtXNISV0wP2uan-txf3zm0kd916a3Hs&usqp=CAU)
 
 ---
 
